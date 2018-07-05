@@ -43,7 +43,6 @@ disp();
 /*
 * Generator Functions
 */
-"use strict" 
 function* rainbow() { 
    // the asterisk marks this as a generator 
    yield 'red'; 
