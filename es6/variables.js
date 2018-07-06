@@ -29,7 +29,7 @@ const x = 10 ;
 * Variable hoisting
 */
 var main = function() { 
-    for(var x = 0;x<5;x++) { 
+    for(let x = 0;x<5;x++) { 
        console.log(x); 
     } 
     console.log("x can be accessed outside the block scope x value is :"+x); 

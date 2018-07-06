@@ -104,8 +104,9 @@ console.log(val1 === val2) // return true
 console.log(div);
 
 /*
-* Object De-structuring
+* Object Destructuring
 */
+// Default values
 var emp = { name: 'John', Id: 3 }; 
 var {name, Id} = emp; 
 console.log(name); 
@@ -121,13 +122,9 @@ const person = {
   }
 }
 
-// Extracting nested values
+// object matching, deep matching
 var {facts: {hobby}} = person;  
 console.log(hobby); // 'Photo'  
-
-// same, but different
-var {hobby, work} = person.facts;
-console.log(hobby);
 
 // Default values  that will be used if the data to be extracted doesn't exist
 const {hometown = 'Unknown'} = person;  
@@ -139,3 +136,20 @@ const toString = ({name, age}) => {
 }
   
 console.log(toString(person)); // Luke is 24 years old 
+console.log(div);
+
+/*
+* Parameter Context Matching
+*/
+function f ([ name, val ]) {
+  console.log(name, val)
+}
+function g ({ name: n, val: v }) {
+  console.log(n, v)
+}
+function h ({ name, val }) {
+  console.log(name, val)
+}
+f([ "bar", 42 ]);
+g({ name: "foo", val:  7 });
+h({ name: "bar", val: 42 });
